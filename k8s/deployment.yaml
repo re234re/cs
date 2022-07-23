@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mjkop
+  name: jp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mjkop
+      app: jp
   template:
     metadata:
       labels:
-        app: mjkop
+        app: jp
     spec:
       containers:
       - image: okteto.dev/mjkop:latest
-        name: mjkop
+        name: jp
         ports:
         - containerPort: 8080
         env:
